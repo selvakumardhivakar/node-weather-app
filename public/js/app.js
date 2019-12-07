@@ -1,5 +1,3 @@
-console.log("Dynamic content updated!")
-
 const weatherForm = document.querySelector("form")
 const address = document.querySelector("input")
 const locationResult = document.querySelector("#location")
@@ -13,7 +11,6 @@ document.addEventListener("submit", (e) => {
 			res.json().then((data) => {
 				if (data.error) {
 					locationResult.textContent = data.error
-					console.log(data)
 				} else {
 					locationResult.textContent = "Location: " + data.location
 					forcastResult.textContent = "Weather: " + data.forcastdata
